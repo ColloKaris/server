@@ -21,5 +21,11 @@ router.get('/login', (req, res) => {
 });
 router.post('/login', (req, res) => {
     const { email, password } = req.body;
-    res.send(email.toUpperCase());
+    // type guard
+    if (email) {
+        res.send(email.toUpperCase());
+    }
+    else {
+        res.send('You must provide an email');
+    }
 });

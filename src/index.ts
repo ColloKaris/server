@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 const app = express()
 
 // parse the contents of a form
-//app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.urlencoded({ extended: true}));
 
 // handles router of the application
 app.use(router);
