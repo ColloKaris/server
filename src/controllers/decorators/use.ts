@@ -2,6 +2,7 @@ import 'reflect-metadata';
 import { MetadataKeys } from './MetadataKeys';
 import { RequestHandler } from 'express';
 
+// THIS DECORATOR ALLOWS US TO ADD MIDDLEWARES TO OUR APPLICATION
 // The use middleware will need to be called multiple times
 export function use(middleware: RequestHandler) {
   return function(target: any, key: string, desc: PropertyDescriptor) {

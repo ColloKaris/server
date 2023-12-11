@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.use = void 0;
 require("reflect-metadata");
 const MetadataKeys_1 = require("./MetadataKeys");
+// THIS DECORATOR ALLOWS US TO ADD MIDDLEWARES TO OUR APPLICATION
 // The use middleware will need to be called multiple times
 function use(middleware) {
     return function (target, key, desc) {
